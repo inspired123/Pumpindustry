@@ -1,0 +1,5 @@
+[14-Oct-2020 05:24:43 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on boolean in /home/travelsa/public_html/caasaservice.com/PumpIndustry/Admin/contact/contact-email.php:12
+Stack trace:
+#0 /home/travelsa/public_html/caasaservice.com/PumpIndustry/Admin/scripts/dynamic-page.php(32): include()
+#1 {main}
+  thrown in /home/travelsa/public_html/caasaservice.com/PumpIndustry/Admin/contact/contact-email.php on line 12
