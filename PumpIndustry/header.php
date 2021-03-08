@@ -71,10 +71,9 @@
 				          </li>	
 				          <li><a href="../Pump-News">Pump News</a></li>
 				          <li><a href="../Pump-Events">Pump Events</a></li>
-				           <li><a href="../Pump-Directory">Pump Directory</a></li>
-				            <li><a href="../Pump-101">Pump 101</a></li>
+				          
 				             <li><a href="../careers-jobs-listings">Career/Jobs</a></li>
-				              <li><a href="../Useful-Links">Useful Links</a></li>
+				              <li><a href="#">Blog</a></li>
 				            
 				          					          
 				          <li><a href="../Contact-Us">Contact Us</a></li>

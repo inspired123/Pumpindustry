@@ -19,89 +19,19 @@ Copyright &copy;2006-2018 All rights reserved |  by <a href="https://PumpIndustr
 							<div class="single-footer-widget">
 								<h6>Newsletter</h6>
 								<p>Stay update with our latest</p>
-							<div class="outside-container">
-	<div class="newsletter-area">
-		
-	
-		<span class="email-message" id="email_msg"></span>
-		<form method="post">
-			<input type="email" name="useremail" placeholder="YourEmail@email.com" class="email-box" maxlength="60" id="email_data">
-		
-			<button class="submit-button" type="button" id="email_submit"><i class="fa fa-long-arrow-right" style="color: white;background-color: #f8c405;padding: 14px;margin: 0px 0 0 -4px;" aria-hidden="true"></i></button>
-		</form>
-	</div>
-</div>
+								<div class="" id="mc_embed_signup">
+									<form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="form-inline">
+										<input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '" required="" type="email">
+			                            	<button class="click-btn btn btn-default"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+			                            	<div style="position: absolute; left: -5000px;">
+												<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+											</div>
+
+										<div class="info"></div>
+									</form>
 								</div>
 							</div>
-						</div>	
-
-
-
-
-
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-	
-$(document).ready(function (){
-
-	$("#email_submit").click(function (){
-
-     /*	var email_data = $("#email_data").val();*/
-		var $email_data_var;
-		$email_data_var = $("#email_data").val();
-		if($email_data_var == ''){
-			$("#email_msg").html("Please Enter a Email Address");
-		}
-		else{
-
-			$.ajax({
-
-				type:'POST',
-				url:"https://caasaservice.com/PumpIndustry/ajax/email-submit.php",
-				data:{email_data_values : $email_data_var},
-				success:function(response){
-					$("#email_msg").html(response);
-				}
-
-			});
-			
-	       /* $.ajax({
-	            url: "https://caasaservice.com/PumpIndustry/subscribe-mail.php",
-	            type:'POST',
-	            dataType: "json",
-	            data: {email_data:email_data},
-	           	success: function(response) {
-	                if (response.success == true) {
-				//	window.location.href='thankyou.html';
-				$('.form-group').removeClass('has-error')
-								.removeClass('has-success');
-				$('.text-danger').remove();
-
-			$('#super').html('<h5 style="color:green;">'+response.text+'</h5>');
-
-		$(".display-error").hide();
-			$("#contact-form").trigger("reset");
-			return true;
-
-				}else{
-				$(".display-error").html("<ul>"+response.error+"</ul>");
-                    $(".display-error").css("display","block");
-
-				$('#super').html('');
-				return false;
-				}
-
-	            }
-	        });*/
-
-		}
-
-	});
-
-});
-
-</script>						
+						</div>						
 						<div class="col-lg-2 col-md-6 col-sm-6 social-widget">
 							<div class="single-footer-widget">
 								<h6>Follow Us</h6>
