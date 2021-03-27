@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menus>
+    <group name="General" order="0">
+        <menugroup name="Events" icon="fa fa-calendar" order="10">
+            <menu name="View Events" route="events.index" />
+            <menu name="Create Events" route="events.create" />
+        </menugroup>
+    </group>
+</menus>

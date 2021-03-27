@@ -1,0 +1,11 @@
+{
+  "name": "events",
+  "version": "0.0.1",
+  "type" : "local",
+  "providers": [
+    "Providers\\EventsServiceProvider"
+  ],
+  "helpers" : {
+    "EventsBot":"cms\\events\\helpers\\EventsBot"
+  }
+}

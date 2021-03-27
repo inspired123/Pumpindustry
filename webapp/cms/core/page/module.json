@@ -1,0 +1,15 @@
+{
+  "name": "page",
+  "version": "0.0.1",
+  "type" : "core",
+  "providers": [
+    "providers\\PageServiceProvider"
+  ],
+  "helpers" : {
+	"Page" : "cms\\core\\page\\helpers\\Page"
+  },
+  "search" : {
+    "page" : "search\\Page"
+  }
+
+}

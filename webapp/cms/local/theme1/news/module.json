@@ -1,0 +1,11 @@
+{
+  "name": "news",
+  "version": "0.0.1",
+  "type" : "local",
+  "providers": [
+    "Providers\\NewsServiceProvider"
+  ],
+   "helpers" : {
+    "NewsBot":"cms\\news\\helpers\\NewsBot"
+  }
+}

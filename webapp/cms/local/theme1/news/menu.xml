@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menus>
+    <group name="General" order="0">
+        <menugroup name="News" icon="fa fa-newspaper-o" order="10">
+            <menu name="View News" route="news.index" />
+            <menu name="Create News" route="news.create" />
+            <menu name="News Api" route="rnews" />
+        </menugroup>
+    </group>
+</menus>

@@ -1,0 +1,11 @@
+{
+  "name": "token",
+  "version": "0.0.1",
+  "type" : "local",
+  "providers": [
+    "Providers\\TokenServiceProvider"
+  ],
+  "helpers" : {
+    "Token":"cms\\token\\Helpers\\Tokens"
+  }
+}
