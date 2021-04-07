@@ -49,7 +49,7 @@ class MailAlertCommand extends Command
                 ->get();
 
         \CmsMail::setMailConfig();
-        $emails = ['shunramit@gmail.com', 'sachinvarmaraja@gmail.com',];
+        $emails = ['shunramit@gmail.com'];
 
         Mail::to($emails)->send(new AlertMail($counts));
 
