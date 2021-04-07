@@ -35,10 +35,8 @@
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                     <span class="input-group-btn">
-                        <input id="thumbnail" class="form-control" type="text" name="site_logo" style="width: 75%;float: left" value="{{(@$data->site_logo) ? $data->site_logo : ''}}">
-                         <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary" style="width: 25%">
-                           <i class="fa fa-picture-o"></i> Choose
-                         </a>
+                        @include('layout::widget.image',['name'=>'image','id'=>'image','value'=>@$data->site_logo])
+                        
                     </span>
                 </div>
             </div>
@@ -62,11 +60,9 @@
     {!! Cms::script("theme/vendors/switchery/dist/switchery.min.js") !!}
     <!-- validator -->
     {!! Cms::script("theme/vendors/validator/validator.js") !!}
-    <script src="/vendor/laravel-filemanager/js/lfm.js"></script>
     <script>
         $("documnt").ready(function() {
             $('select').select2();
-            $('#lfm').filemanager('image');
         });
     </script>
 @endsection

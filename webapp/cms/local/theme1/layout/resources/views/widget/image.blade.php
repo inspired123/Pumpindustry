@@ -4,7 +4,7 @@
 </a>
 
 @section('script')
-    {!!Cms::script('theme/vendors/laravel-filemanager/js/lfm.js')!!}
+    <script src="/vendor/laravel-filemanager/js/stand-alone-button.js"></script>
 <script>
     $('.lfm').filemanager('{{isset($type) ? $type : "image"}}');
 </script>

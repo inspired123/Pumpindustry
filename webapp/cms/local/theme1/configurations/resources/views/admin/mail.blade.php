@@ -59,11 +59,9 @@
     {!! Cms::script("theme/vendors/switchery/dist/switchery.min.js") !!}
     <!-- validator -->
     {!! Cms::script("theme/vendors/validator/validator.js") !!}
-    <script src="/vendor/laravel-filemanager/js/lfm.js"></script>
     <script>
         $("documnt").ready(function() {
             $('select').select2();
-            $('#lfm').filemanager('image');
         });
     </script>
 @endsection

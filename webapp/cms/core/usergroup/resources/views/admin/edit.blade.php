@@ -56,8 +56,4 @@
 @section('script')
     <!-- validator -->
     {!! Cms::script("theme/vendors/validator/validator.js") !!}
-    <script src="/vendor/laravel-filemanager/js/lfm.js"></script>
-    <script>
-        $('#lfm').filemanager('image');
-    </script>
-    @endsection
+@endsection

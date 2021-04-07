@@ -67,7 +67,7 @@ class NewsBot {
 					if($img) {
 						$img = $img->getAttribute('src');
 					} else {
-						$img = skin().'images/news-placeholder.jpg';
+						$img = skin().'/images/news-placeholder.jpg';
 					}
 
 					if($title && $a && $desc) {
@@ -129,7 +129,7 @@ class NewsBot {
 					if($img) {
 						$img = $img->getAttribute('src');
 					} else {
-						$img = skin().'images/news-placeholder.jpg';
+						$img = skin().'/images/news-placeholder.jpg';
 					}
 
 					if($title && $a && $desc && count($sponsored) == 0) {
@@ -178,7 +178,7 @@ class NewsBot {
 					} else {
 						$desc = '-';
 					}
-					$img = skin().'images/news-placeholder.jpg';
+					$img = skin().'/images/news-placeholder.jpg';
 
 					if($title && isset($title->nodeValue) && $a && $desc) {
 						$data = [
@@ -228,7 +228,7 @@ class NewsBot {
 					if($img) {
 						$img = $img->getAttribute('src');
 					} else {
-						$img = skin().'images/news-placeholder.jpg';
+						$img = skin().'/images/news-placeholder.jpg';
 					}
 
 					if($title && $a && $desc) {
@@ -255,14 +255,14 @@ class NewsBot {
 	public function getNewsFromResource($isBot = false) {
 		if($isBot == true) {
 			$this->worldpumps();
-			// $this->empoweringpumps();
-			// $this->impellerHomePage();
-			// $this->impellerNewsByCategory('magazin_category/technical-news/');
-			// $this->impellerNewsByCategory('magazin_category/corporate-news/');
-			// $this->impellerNewsByCategory('magazin_category/internet-software-2/');
-			// $this->impellerNewsByCategory('magazin_category/books-papers/');
-			// $this->impellerNewsByCategory('magazin_category/contracts-case-stories/');
-			// $this->impellerNewsByCategory('magazin_category/miscellaneous/');
+			$this->empoweringpumps();
+			$this->impellerHomePage();
+			$this->impellerNewsByCategory('magazin_category/technical-news/');
+			$this->impellerNewsByCategory('magazin_category/corporate-news/');
+			$this->impellerNewsByCategory('magazin_category/internet-software-2/');
+			$this->impellerNewsByCategory('magazin_category/books-papers/');
+			$this->impellerNewsByCategory('magazin_category/contracts-case-stories/');
+			$this->impellerNewsByCategory('magazin_category/miscellaneous/');
 		}
 
 		// $this->save();
