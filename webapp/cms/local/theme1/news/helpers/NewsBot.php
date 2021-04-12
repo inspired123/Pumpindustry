@@ -14,6 +14,12 @@ class NewsBot {
 		$this->newsArray = [];
 	}
 
+	private function getPlaceHolderImage() {
+		$images = ['news-placeholder-1.jpg','news-placeholder-2.jpg','news-placeholder-3.jpg','news-placeholder-4.jpg','news-placeholder-5.png','news-placeholder-2.png','news-placeholder.jpg'];
+
+		return skin().'\/images/'.$images[array_rand($images)];
+	}
+
 
 	private function getElementsByClass(&$parentNode, $tagName, $className) {
 	    $nodes=array();
@@ -67,7 +73,7 @@ class NewsBot {
 					if($img) {
 						$img = $img->getAttribute('src');
 					} else {
-						$img = skin().'/images/news-placeholder.jpg';
+						$img = $this->getPlaceHolderImage();
 					}
 
 					if($title && $a && $desc) {
@@ -129,7 +135,7 @@ class NewsBot {
 					if($img) {
 						$img = $img->getAttribute('src');
 					} else {
-						$img = skin().'/images/news-placeholder.jpg';
+						$img = $this->getPlaceHolderImage();
 					}
 
 					if($title && $a && $desc && count($sponsored) == 0) {
@@ -178,7 +184,7 @@ class NewsBot {
 					} else {
 						$desc = '-';
 					}
-					$img = skin().'/images/news-placeholder.jpg';
+					$img = $this->getPlaceHolderImage();
 
 					if($title && isset($title->nodeValue) && $a && $desc) {
 						$data = [
@@ -228,7 +234,7 @@ class NewsBot {
 					if($img) {
 						$img = $img->getAttribute('src');
 					} else {
-						$img = skin().'/images/news-placeholder.jpg';
+						$img = $this->getPlaceHolderImage();
 					}
 
 					if($title && $a && $desc) {

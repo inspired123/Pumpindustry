@@ -71,7 +71,7 @@ class PageController extends Controller
         $data->url  = $request->url;
         $data->page_content = $request->page_content;
         $data->status = $request->status;
-        $data->can = $request->can;
+        $data->can = implode(",",$request->can);
 
 
         if($data->save()){
