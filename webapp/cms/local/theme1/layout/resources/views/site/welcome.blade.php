@@ -258,7 +258,7 @@
                 <span class="lnr lnr-bubble"></span> 04 -->
               </div>
             </div>
-            <a href="#">
+            <a href="{{url('/blogs/'.$b->id)}}">
               <h4>{{$b->title}}</h4>
             </a>
             <p>

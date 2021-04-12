@@ -1,19 +1,12 @@
 <?php
 
-namespace cms\events\Providers;
+namespace cms\blog\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Route;
 use Cms;
-class EventsServiceProvider extends ServiceProvider
+class BlogServiceProvider extends ServiceProvider
 {
-    /*
-     * artisan command
-     */
-    protected $commands = [
-        'cms\events\Console\Commands\EventsBotCommand'
-    ];
-
     /**
      * Bootstrap the application services.
      *
@@ -31,32 +24,30 @@ class EventsServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->registerViews();
-        $this->registerRoot();
-        $this->registerAdminRoot();
-        $this->registerApiRoutes();
-        //$this->registerMiddleware();
-        $this->registerCommand();
 
+    //    $this->registerViews();
+        $this->registerRoot();
+        //$this->registerAdminRoot();
+        //$this->registerMiddleware();
+        //$this->registerApiRoutes();
     }
 
     public function registerRoot()
     {
         Route::prefix('')
             ->middleware(['web'])
-            ->namespace('cms\events\Controllers')
+            ->namespace('cms\blog\Controllers')
             ->group(__DIR__ . '/../routes.php');
 
-
     }
+
     public function registerAdminRoot()
     {
 
         Route::prefix('administrator')
             ->middleware(['web','Admin'])
-            ->namespace('cms\events\Controllers')
+            ->namespace('cms\blog\Controllers')
             ->group(__DIR__ . '/../adminroutes.php');
-
 
     }
 
@@ -69,18 +60,18 @@ class EventsServiceProvider extends ServiceProvider
     {
         $theme = Cms::getCurrentTheme();
 
-        $viewPath = resource_path('views/modules/events');
+        $viewPath = resource_path('views/modules/blog');
 
         //$sourcePath = __DIR__.'/../resources/views';
         $Path = __DIR__.'/../resources/views';
-        $sourcePath = base_path().'/cms/local/'.$theme.'/events/resources/views';
+        $sourcePath = base_path().'/cms/local/'.$theme.'/blog/resources/views';
 
         $this->publishes([
             $sourcePath => $viewPath
         ]);
         $this->loadViewsFrom(array_merge(array_map(function ($path) {
-            return $path . '/modules/events';
-        }, [$Path]), [$sourcePath,$Path]), 'events');
+            return $path . '/modules/blog';
+        }, [$Path]), [$sourcePath,$Path]), 'blog');
     }
     /*
      * register middleware
@@ -96,17 +87,9 @@ class EventsServiceProvider extends ServiceProvider
     public function registerApiRoutes() {
 
         Route::prefix('api')
-            // ->middleware(['UserAuthForApi'])
-            ->namespace('cms\events\Controllers')
+            ->middleware(['UserAuthForApi'])
+            ->namespace('cms\blog\Controllers')
             ->group(__DIR__ . '/../apiroutes.php');
-    }
-
-    /*
-     * register commands
-     */
-    protected function registerCommand()
-    {
-        $this->commands($this->commands);
     }
 
 }

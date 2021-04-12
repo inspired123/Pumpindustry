@@ -3,6 +3,10 @@
 @section('sIte_tItle','Upcoming Events')
 @section('addlinks')
 <style>
+ body {
+    background-color: #ebf4fa;
+    font-family: 'Manrope', sans-serif;
+}
 	hr{
 	border-top: 1px solid #b73640 !important;
 	
@@ -123,11 +127,7 @@
 @endsection
 
 @section('body')
-<br />
-<br />
-<br />
-<br />
-<br />
+
 <div class="container mt-5">
       <div class="row justify-content-center">
         <div class="col-lg-7 text-center">

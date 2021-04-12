@@ -87,14 +87,14 @@ $logoImg = isset(Configurations::getConfig('site')->site_logo) ? Configurations:
         </div>
         <nav id="nav-menu-container">
         <ul class="nav-menu">
-            <li class="#"><a href="">Home</a></li>
+            <li class="#"><a href="{{url('/')}}">Home</a></li>
 
             <li><a href="{{url('news')}}">Pump News</a></li>
             <li><a href="{{url('events')}}">Pump Events</a></li>
 
-            <li><a href="#">Blog</a></li>
+            <li><a href="{{url('/blogs')}}">Blog</a></li>
 
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="{{url('/contact')}}">Contact</a></li>
         </ul>
         </nav>
         <!-- #nav-menu-container -->
@@ -102,9 +102,9 @@ $logoImg = isset(Configurations::getConfig('site')->site_logo) ? Configurations:
     </div>
 </header>
 <!-- #header -->
-
+<div class="main" style="margin-top:128px;">
 @yield('body')
-
+<div>
 <!-- start footer Area -->
 <footer class="footer-area section-gap">
     <div class="container">

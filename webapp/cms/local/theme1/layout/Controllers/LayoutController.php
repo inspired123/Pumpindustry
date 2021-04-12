@@ -33,4 +33,29 @@ class LayoutController extends Controller
         return view('layout::site.welcome',['news' => $news, 'events' => $events, 'blogs' => $blogs]);
     }
 
+    /**
+     * Display a contact page.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function contactPage()
+    {
+        return view('layout::site.contact');
+    }
+    /**
+     * Display a details of the blog.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function blogDetailsPage($id)
+    {
+        $blog = BlogModel::where('status', 1)
+        ->find($id);
+        
+        return view('layout::site.blog',['blog' => $blog]);
+    }
+
+    public function contactPageAction(Request $request) {
+        return redirect()->back();
+    }
 }

@@ -67,14 +67,7 @@ body {
     </style>
 @endsection
 @section('body')
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+
 @php
   $startsFrom = 0;
 @endphp

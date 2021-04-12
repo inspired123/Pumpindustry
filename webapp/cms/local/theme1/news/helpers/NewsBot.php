@@ -238,7 +238,7 @@ class NewsBot {
 							'image' => $img,
 							// 'date' => $today,
 							'short_content' => preg_replace('/\s+/', ' ', trim($desc)),
-							'source' => 'impeller.com'
+							'source' => 'impeller.net'
 						];
 
 						$this->newsArray[] = $data;
