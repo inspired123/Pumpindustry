@@ -161,13 +161,13 @@
               <div class="blog-img"></div>
               <div class="blog-info">
                 <h5>
-                  <a href="#">{{$event->title}}</a>
+                  <a href="{{$event->url}}">{{$event->title}}</a>
                 </h5>
                 <p>
                   {{$event->short_content}}
                 </p>
                 <div class="btn-bar">
-                  <a href="#" class="px-btn-arrow">
+                  <a href="{{$event->url}}" class="px-btn-arrow">
                     <span>Read More</span>
                     <i class="arrow"></i>
                   </a>
