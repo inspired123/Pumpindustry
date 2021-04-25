@@ -32,8 +32,9 @@ class EventsServiceProvider extends ServiceProvider
     public function register()
     {
         $this->registerViews();
-        //$this->registerRoot();
+        $this->registerRoot();
         $this->registerAdminRoot();
+        $this->registerApiRoutes();
         //$this->registerMiddleware();
         $this->registerCommand();
 
@@ -87,6 +88,17 @@ class EventsServiceProvider extends ServiceProvider
     public function registerMiddleware()
     {
         app('router')->aliasMiddleware('MiddleWareName', middlewarepath::class);
+    }
+
+    /*
+     * register api routes
+     */
+    public function registerApiRoutes() {
+
+        Route::prefix('api')
+            // ->middleware(['UserAuthForApi'])
+            ->namespace('cms\events\Controllers')
+            ->group(__DIR__ . '/../apiroutes.php');
     }
 
     /*

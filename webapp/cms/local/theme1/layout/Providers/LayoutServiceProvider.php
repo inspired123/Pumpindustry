@@ -25,10 +25,10 @@ class LayoutServiceProvider extends ServiceProvider
     public function register()
     {
 
-           // $this->registerViews();
-            //$this->registerRoot();
-            //$this->registerAdminRoot();
-            //$this->registerMiddleware();
+        // $this->registerViews();
+        $this->registerRoot();
+        //$this->registerAdminRoot();
+        //$this->registerMiddleware();
 
     }
 

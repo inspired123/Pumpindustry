@@ -24,7 +24,19 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')->hourly();
+        $schedule->command('update:news')
+                 ->hourly();
+        $schedule->command('update:events')
+                ->twiceDaily(6, 18)
+                ->timezone('Asia/Kolkata');
+
+        $schedule->command('alert:mail')
+        ->twiceDaily(8, 22)
+        ->timezone('Asia/Kolkata');
+
+        $schedule->command('alert:mail')
+        ->dailyAt('14.30')
+        ->timezone('Asia/Kolkata');
     }
 
     /**
