@@ -159,12 +159,22 @@
       .news:hover {
         color: chocolate;
       }
+
+      @media only screen and (min-width: 1200px) {
+        #menuright {
+          margin: 0px 0px 0px 930px;
+  }
+       
+        
+        }
+
     </style>
   </head>
+
   <body>
-    <button type="button" id="mobile-nav-toggle">
+    <!-- <button type="button" id="mobile-nav-toggle">
       <i class="lnr lnr-menu"></i>
-    </button>
+    </button> -->
     <header id="header" ,id="home">
       <div class="header-top">
         <div class="container">
@@ -197,30 +207,49 @@
           </div>
         </div>
       </div>
-      <div class="container main-menu">
-        <div class="row align-items-center justify-content-between d-flex">
-          <div id="logo">
-            <a href="../"
-              ><img
-                src="img/Pump-Industry-logo.jpg"
-                alt=""
-                title=""
-                style="height: 50px"
-            /></a>
-          </div>
-          <nav id="nav-menu-container">
-            <ul class="nav-menu">
-              <li class="#"><a href="">Home</a></li>
-
-              <li><a href="news.html">Pump News</a></li>
-              <li><a href="events.html">Pump Events</a></li>
-
-              <li><a href="#">Blog</a></li>
-
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-          </nav>
-          <!-- #nav-menu-container -->
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div id="logo">
+          <a href="../"
+            ><img
+              src="img/Pump-Industry-logo.jpg"
+              alt=""
+              title=""
+              style="height: 50px"
+          /></a>
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarText"
+          aria-controls="navbarText"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto" id="menuright">
+           
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="news.html">Pump News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="events.html">Pump Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      
         </div>
       </div>
     </header>
