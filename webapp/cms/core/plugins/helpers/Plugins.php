@@ -111,7 +111,7 @@ class Plugins
 
         $data = $obj->$function();
 
-        //print_r(json_decode($plugin->parms));exit;
+        //print_r(json_decode($plugin->parms)->box_count);exit;
 
         return [$plugin->view,$data,json_decode($plugin->parms)];
 

@@ -13,6 +13,7 @@ use Session;
 use DB;
 use CGate;
 use User;
+use DateTime;
 
 class EventsController extends Controller
 {
@@ -63,10 +64,16 @@ class EventsController extends Controller
             'day_count' => 'required',
             'status' => 'required',
         ]);
+
+        $date = new DateTime($request->event_date);
+        $date->modify('+'.$request->day_count.' day');
+        $endDate = $date->format('Y-m-d');
+
         $obj = new EventsModel;
         $obj->title = $request->title;
         $obj->short_content = $request->short_content;
-        $obj->event_date = $request->event_date;
+        $obj->event_date = date_format(date_create($request->event_date),"Y-m-d");
+        $obj->event_end_date = $endDate;
         $obj->location = $request->location;
         $obj->source = $request->source;
         $obj->url = $request->url;
@@ -121,10 +128,15 @@ class EventsController extends Controller
             'day_count' => 'required',
             'status' => 'required',
         ]);
+        $date = new DateTime($request->event_date);
+        $date->modify('+'.$request->day_count.' day');
+        $endDate = $date->format('Y-m-d');
+
         $obj = EventsModel::find($id);
         $obj->title = $request->title;
         $obj->short_content = $request->short_content;
-        $obj->event_date = $request->event_date;
+        $obj->event_date = date_format(date_create($request->event_date),"Y-m-d");
+        $obj->event_end_date = $endDate;
         $obj->location = $request->location;
         $obj->source = $request->source;
         $obj->url = $request->url;

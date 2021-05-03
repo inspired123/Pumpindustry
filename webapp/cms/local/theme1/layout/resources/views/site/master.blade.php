@@ -32,6 +32,9 @@ $logoImg = isset(Configurations::getConfig('site')->site_logo) ? Configurations:
     {!!Cms::style('css/font-awesome.min.css')!!}
 	{!!Cms::style('css/bootstrap.css')!!}
 	{!!Cms::style('css/main.css')!!}
+    
+{!!Cms::script('theme/vendors/jquery/dist/jquery.min.js')!!}
+{!!Cms::script('js/bootstrap.min.js')!!}
 
 
     @yield('addlinks')
@@ -47,24 +50,7 @@ $logoImg = isset(Configurations::getConfig('site')->site_logo) ? Configurations:
     <div class="container">
         <div class="row">
         <div class="col-lg-6 col-sm-6 col-4 header-top-left no-padding">
-            <ul>
-            <li>
-                <a
-                href="https://www.facebook.com/Pump-Industry-120516858033092"
-                ><i class="fa fa-facebook"></i
-                ></a>
-            </li>
-            <li>
-                <a href="https://twitter.com/PumpIndustry"
-                ><i class="fa fa-twitter"></i
-                ></a>
-            </li>
-            <li>
-                <a href="https://www.linkedin.com/groups/3938215/"
-                ><i class="fa fa-linkedin"></i
-                ></a>
-            </li>
-            </ul>
+            @includeIf(Plugins::get('SocialLinks')[0],['data'=>Plugins::get('SocialLinks')[1]])
         </div>
         <div class="col-lg-6 col-sm-6 col-8 header-top-right no-padding">
             <a href="mailto:krishnareddyk@yahoo.com"
@@ -79,8 +65,8 @@ $logoImg = isset(Configurations::getConfig('site')->site_logo) ? Configurations:
         <div id="logo">
         <a href="{{url('/')}}"
             ><img
-            src="{{skin('/img/Pump-Industry-logo.jpg')}}"
-            alt=""
+            src="{{Configurations::getConfig('site')->site_logo}}"
+            alt="Logo"
             title=""
             style="height: 50px"
         /></a>
@@ -113,14 +99,12 @@ $logoImg = isset(Configurations::getConfig('site')->site_logo) ? Configurations:
         <div class="single-footer-widget">
             <h6>About Us</h6>
             <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore dolore magna aliqua.
+            {{Configurations::getConfig('site')->about}}
             </p>
             <p class="footer-text">
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            Copyright &copy;2006-2018 All rights reserved | by
-            <a href="https://PumpIndustry.com" target="_blank"
-                >PumpIndustry.com</a
+            Copyright &copy;{{date('Y')}} All rights reserved | by
+            <a href="{{url('/')}}" target="_blank">{{Configurations::getConfig('site')->site_name}}</a
             >
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </p>
@@ -136,16 +120,7 @@ $logoImg = isset(Configurations::getConfig('site')->site_logo) ? Configurations:
             <h6>Follow Us</h6>
             <p>Let us be social</p>
             <div class="footer-social d-flex align-items-center">
-            <a href="https://www.facebook.com/Pump-Industry-120516858033092"
-                ><i class="fa fa-facebook"></i
-            ></a>
-
-            <a href="https://twitter.com/PumpIndustry"
-                ><i class="fa fa-twitter"></i
-            ></a>
-            <a href="https://www.linkedin.com/groups/3938215/"
-                ><i class="fa fa-linkedin"></i
-            ></a>
+                @includeIf(Plugins::get('SocialLinks')[0],['data'=>Plugins::get('SocialLinks')[1]])
             </div>
         </div>
         </div>
@@ -153,11 +128,7 @@ $logoImg = isset(Configurations::getConfig('site')->site_logo) ? Configurations:
     </div>
 </footer>
 
-
-{!!Cms::script('theme/vendors/jquery/dist/jquery.min.js')!!}
-{!!Cms::script('js/bootstrap.min.js')!!}
-
-
+@include('layout::site.notifications')
 @section('script')
 
 @endsection

@@ -48,6 +48,14 @@
                 </div>
             </div>
 
+            <div class="item form-group">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">About us content<span class="required">*</span>
+                </label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    {{Form::textarea('about',@$data->about,array('id'=>"about",'class'=>"form-control col-md-7 col-xs-12"))}}
+                </div>
+            </div>
+
         </div>
         <div class="col-xs-12">
             <h3>Theme Details</h3>

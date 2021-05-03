@@ -198,3 +198,6 @@
         transform: scale(1);
     }
 }
+.slider  span h2 {
+    color: white;
+}

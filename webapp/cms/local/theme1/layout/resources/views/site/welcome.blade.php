@@ -121,7 +121,7 @@
     
 
     <!-- start banner Area -->
-    <section class="banner-area relative" id="home">
+    <!-- <section class="banner-area relative" id="home">
       <div class="overlay overlay-bg"></div>
       <div class="container">
         <div
@@ -138,7 +138,13 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
+    <div>
+      @php
+        $slider = Plugins::get('Slider');
+      @endphp
+      @includeIf($slider[0],['data'=>$slider[2]])
+    </div>
     <!-- End banner Area -->
 
     <section

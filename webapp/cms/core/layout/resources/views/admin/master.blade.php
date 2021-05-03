@@ -31,6 +31,9 @@
     {!!Cms::style('theme/vendors/pnotify/dist/pnotify.css')!!}
     {!!Cms::style('theme/vendors/pnotify/dist/pnotify.buttons.css')!!}
 
+    
+    {!! Cms::style("theme/vendors/switchery/dist/switchery.min.css") !!}
+
 
     @yield('style')
 
@@ -128,6 +131,9 @@
     <!-- PNotify -->
     {!! Cms::script('theme/vendors/pnotify/dist/pnotify.js') !!}
     {!! Cms::script('theme/vendors/pnotify/dist/pnotify.buttons.js') !!}
+
+    
+    {!! Cms::script("theme/vendors/switchery/dist/switchery.min.js") !!}
 
     <!-- Custom Theme Scripts -->
     {!! Cms::script('theme/build/js/custom.min.js') !!}

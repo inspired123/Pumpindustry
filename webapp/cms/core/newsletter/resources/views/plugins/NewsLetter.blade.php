@@ -6,7 +6,7 @@
     
         <input
         type="email"
-        name="useremail"
+        name="email"
         placeholder="YourEmail@email.com"
         class="form-control"
         maxlength="60"
@@ -15,8 +15,8 @@
 
         <button
         class="submit-button click-btn btn btn-default"
-        type="button"
-        id="email_submit"
+        type="submit"
+        id="email_submit1"
         >
         <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
         </button>

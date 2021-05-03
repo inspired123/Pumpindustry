@@ -5,15 +5,13 @@
 
 <div class="slider" id="slider1">
     <!-- Slides -->
-
-
-@if(isset($parm->box_count))
-    @for($i=0;$i<$parm->box_count;$i++)
+@if(isset($data->box_count))
+    @for($i=0;$i<$data->box_count;$i++)
     <?php $ttt = "image".$i; ?>
-    <div style="background-image:url({{url(@$parm->$ttt)}})">
+    <div style="background-image:url({{url(@$data->$ttt)}})">
         <span>
         <?php $title = "title1_".$i; ?>
-          <h2>{{@$parm->$title}}</h2>
+          <h2>{{@$data->$title}}</h2>
       </span>
     </div>
     @endfor
@@ -41,13 +39,13 @@ $(document).ready(function() {
   
   $("#slider1").sliderResponsive({
   // Using default everything
-     slidePause: "{{ isset($parm->slidePause) ?  $parm->slidePause : '5000'}}",
-     fadeSpeed: "{{ @$parm->fadeSpeed }}",
-     autoPlay:  "{{ (@$parm->autoPlay==1) ? 'on' : 'off' }}",
-     showArrows: "{{ (@$parm->showArrows==1) ? 'on' : 'off' }}",
-     hideDots: "{{ (@$parm->hideDots==1) ? 'off' : 'on' }}",
-     hoverZoom: "{{ (@$parm->hoverZoom==1) ? 'on' : 'off' }}",
-     titleBarTop: "{{ (@$parm->titleBarTop==1) ? 'on' : 'off' }}",
+     slidePause: "{{ isset($data->slidePause) ?  $data->slidePause : '5000'}}",
+     fadeSpeed: "{{ @$data->fadeSpeed }}",
+     autoPlay:  "{{ (@$data->autoPlay==1) ? 'on' : 'off' }}",
+     showArrows: "{{ (@$data->showArrows==1) ? 'on' : 'off' }}",
+     hideDots: "{{ (@$data->hideDots==1) ? 'off' : 'on' }}",
+     hoverZoom: "{{ (@$data->hoverZoom==1) ? 'on' : 'off' }}",
+     titleBarTop: "{{ (@$data->titleBarTop==1) ? 'on' : 'off' }}",
 
   }); 
 }); 

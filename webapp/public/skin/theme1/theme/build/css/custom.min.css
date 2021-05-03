@@ -14,3 +14,6 @@
     position: absolute;
     left: unset;
 }
+span.section {
+    padding-bottom: 20px;
+}

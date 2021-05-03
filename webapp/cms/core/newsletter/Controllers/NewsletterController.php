@@ -10,6 +10,7 @@ use User;
 use Session;
 use Mail;
 use CmsMail;
+use Log;
 use cms\core\newsletter\Mail\NewsLetterMail;
 use cms\core\newsletter\Jobs\SendNewsLetter;
 
@@ -285,13 +286,18 @@ class NewsletterController extends Controller
             'email' => 'required|email|unique:newsletter_subscribers,email',
             'status' => 'sometimes'
         ]);
-
+        
+        //print_r($request->all());exit;
         $obj = new NewsLetterModel;
         $obj->email = $request->email;
         $obj->status = isset($request->status) ? $request->status : 1;
         if($obj->save())
         {
-            Mail::to($request->email)->queue(new SubscriptionConfirmMail());
+            try {
+                Mail::to($request->email)->queue(new SubscriptionConfirmMail());
+            } catch(\Exception $e) {
+                Log::error($e);
+            }
 
             $msg = "Join successfully";
             $class_name = "success";
@@ -300,6 +306,7 @@ class NewsletterController extends Controller
             $msg = "Something went wrong !! Please try again later !!";
             $class_name = "error";
         }
+        
 
         Session::flash($class_name, $msg);
         return redirect()->back();

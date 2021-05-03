@@ -14,6 +14,6 @@ return [
 
         "view"   => "sociallinks::plugins.sociallinks",
 
-        "adminview" => "sociallinks::plugins.admin.sociallinks"
+        "adminview" => "sociallinks::plugins.links"
     ]
 ];

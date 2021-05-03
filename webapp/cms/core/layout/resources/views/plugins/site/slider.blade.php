@@ -4,7 +4,6 @@
 
 
 <div class="slider" id="slider1">
-    <!-- Slides -->
 
 
 @if(isset($parm->box_count))
