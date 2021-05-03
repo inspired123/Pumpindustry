@@ -1,7 +1,7 @@
 <div class="social-links">
 
 	<div class="social">
-	    <ul class="social-networks spin-icon"> 
+	    <ul class="social-networks spin-icon" style="display:flex;"> 
 	    	@if(isset($data['linkedin']))
 		    <li>
 		     	<a href="{{$data['linkedin']}}" class="icon-linkedin"><i class="fa fa-linkedin"></i></a>
