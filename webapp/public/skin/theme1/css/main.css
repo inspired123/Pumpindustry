@@ -3597,8 +3597,27 @@ body.mobile-nav-active #mobile-nav-toggle {
   background: #f9f9ff;
 }
 
+/* start Responsive Menu */
+
+@media only screen and (min-width: 1200px) {
+  #menuright {
+    margin: 0px 0px 0px 930px;
+}
+ 
+  
+  }
+
+/* End Responsive menu */
+
 /*
 ################
                End Blog Details  Page style
 ################
 */
+
+
+
+
+
+
+
