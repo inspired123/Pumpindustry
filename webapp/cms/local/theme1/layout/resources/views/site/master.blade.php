@@ -60,8 +60,9 @@ $logoImg = isset(Configurations::getConfig('site')->site_logo) ? Configurations:
         </div>
     </div>
     </div>
-    <div class="container main-menu">
-    <div class="row align-items-center justify-content-between d-flex">
+    <nav class="navbar navbar-expand-lg navbar-light">
+
+  
         <div id="logo">
         <a href="{{url('/')}}"
             ><img
@@ -71,7 +72,39 @@ $logoImg = isset(Configurations::getConfig('site')->site_logo) ? Configurations:
             style="height: 50px"
         /></a>
         </div>
-        <nav id="nav-menu-container">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarText"
+          aria-controls="navbarText"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto" id="menuright">
+           
+            <li class="nav-item">
+              <a class="nav-link" href="{{url('/')}}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{url('news')}}">Pump News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{url('events')}}">Pump Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{url('/blogs')}}">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{url('/contact')}}">Contact</a>
+            </li>
+          </ul>
+        </div>
+        </nav>
+        <!-- <nav id="nav-menu-container">
         <ul class="nav-menu">
             <li class="#"><a href="{{url('/')}}">Home</a></li>
 
@@ -82,7 +115,7 @@ $logoImg = isset(Configurations::getConfig('site')->site_logo) ? Configurations:
 
             <li><a href="{{url('/contact')}}">Contact</a></li>
         </ul>
-        </nav>
+        </nav> -->
         <!-- #nav-menu-container -->
     </div>
     </div>
